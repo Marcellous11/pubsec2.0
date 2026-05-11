@@ -43,13 +43,13 @@ export function Footer() {
               Intelligent automation, AI, and code modernization for the federal
               government and the critical infrastructure that runs underneath it.
             </p>
-            <p className="mt-6 font-mono text-[11px] uppercase tracking-[0.18em] text-text-dim">
+            <p className="mt-6 text-xs font-semibold uppercase tracking-wide text-text-dim">
               FedRAMP · IL4 / IL5 deployments
             </p>
           </div>
           {cols.map((c) => (
             <div key={c.heading}>
-              <div className="font-mono text-[11px] uppercase tracking-[0.18em] text-text-dim">
+              <div className="text-xs font-semibold uppercase tracking-wide text-text-dim">
                 {c.heading}
               </div>
               <ul className="mt-5 space-y-3">
@@ -68,10 +68,10 @@ export function Footer() {
           ))}
         </div>
         <div className="mt-16 flex flex-col items-start justify-between gap-4 border-t border-[var(--border)] pt-6 md:flex-row md:items-center">
-          <div className="font-mono text-[11px] uppercase tracking-[0.18em] text-text-dim">
+          <div className="text-xs text-text-dim">
             © {new Date().getFullYear()} Invoke, Inc. · All rights reserved
           </div>
-          <div className="flex gap-6 font-mono text-[11px] uppercase tracking-[0.18em] text-text-dim">
+          <div className="flex gap-6 text-xs text-text-dim">
             <Link href="/legal/privacy" className="hover:text-text">Privacy</Link>
             <Link href="/legal/terms" className="hover:text-text">Terms</Link>
             <Link href="/legal/accessibility" className="hover:text-text">Accessibility</Link>

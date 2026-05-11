@@ -31,7 +31,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col bg-bg text-text">
         <a
           href="#main"
-          className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:bg-accent focus:text-bg focus:px-3 focus:py-2 focus:text-xs focus:font-mono focus:tracking-wider"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:bg-accent focus:text-bg focus:px-3 focus:py-2 focus:text-sm focus:font-medium focus:rounded-md"
         >
           Skip to content
         </a>

@@ -11,9 +11,7 @@ export default function AboutPage() {
   return (
     <>
       <PageHeader
-        number="04"
-        kicker="About · the firm"
-        total="04 / 04"
+        kicker="About"
         title={<>Built for the next ten years <span className="text-text-muted">of the mission.</span></>}
         subtitle="Invoke is a small business federal automation and AI services firm. We modernize legacy systems, deploy agentic and RPA platforms inside cleared boundaries, and train the workforce that operates them."
       />
@@ -21,7 +19,7 @@ export default function AboutPage() {
       <Section bordered={false}>
         <div className="grid grid-cols-1 gap-12 md:grid-cols-12">
           <div className="md:col-span-5">
-            <div className="font-mono text-[11px] uppercase tracking-[0.2em] text-text-dim">Mandate</div>
+            <div className="text-xs font-semibold uppercase tracking-wide text-text-dim">Mandate</div>
             <h2 className="mt-6 text-3xl leading-tight tracking-[-0.02em] text-text md:text-4xl">
               We are not the vendor that ships pilots.
             </h2>
@@ -41,7 +39,7 @@ export default function AboutPage() {
         </div>
 
         <div id="leadership" className="mt-24 border-t border-[var(--border)] pt-16">
-          <div className="font-mono text-[11px] uppercase tracking-[0.2em] text-text-dim">Leadership</div>
+          <div className="text-xs font-semibold uppercase tracking-wide text-text-dim">Leadership</div>
           <p className="mt-6 max-w-[60ch] text-text-muted">
             Leadership profiles coming soon. Until then,{" "}
             <a className="text-accent underline-offset-4 hover:underline" href="mailto:hello@invokepublic.com">

@@ -1,19 +1,14 @@
 import Link from "next/link";
 
-export function Logo({ withName = true }: { withName?: boolean }) {
+export function Logo() {
   return (
-    <Link href="/" className="group flex items-center gap-3" aria-label="Invoke home">
-      <span
-        className="grid h-7 w-7 place-items-center border border-[var(--border-strong)] bg-bg-raised font-mono text-[11px] tracking-tight text-text transition-colors group-hover:border-accent group-hover:text-accent"
-        aria-hidden
-      >
-        IV
+    <Link href="/" className="group flex items-center gap-1.5" aria-label="Invoke home">
+      <span className="text-lg font-semibold tracking-tight text-text">
+        Invoke
       </span>
-      {withName && (
-        <span className="font-mono text-[13px] tracking-[0.18em] uppercase text-text">
-          Invoke<span className="text-text-dim"> · Public</span>
-        </span>
-      )}
+      <span className="text-lg font-normal tracking-tight text-text-muted">
+        Public Sector
+      </span>
     </Link>
   );
 }

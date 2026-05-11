@@ -44,9 +44,7 @@ export default function ServicesPage() {
   return (
     <>
       <PageHeader
-        number="01"
-        kicker="Services · five disciplines"
-        total="01 / 04"
+        kicker="Services"
         title={<>Five disciplines.<br /><span className="text-text-muted">One delivery model.</span></>}
         subtitle="We compose across all five. Most engagements start with one and earn the right to expand into the rest."
       />
@@ -57,7 +55,7 @@ export default function ServicesPage() {
             <div key={s.id} id={s.id} className="bg-bg p-10 md:p-14">
               <div className="grid grid-cols-1 gap-10 md:grid-cols-12">
                 <div className="md:col-span-3">
-                  <div className="font-mono text-[11px] uppercase tracking-[0.2em] text-accent">
+                  <div className="text-sm font-semibold text-accent">
                     {s.n}
                   </div>
                   <h2 className="mt-6 text-2xl tracking-[-0.01em] text-text md:text-3xl md:leading-tight">

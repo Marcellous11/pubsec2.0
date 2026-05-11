@@ -12,9 +12,7 @@ export default function VehiclesPage() {
   return (
     <>
       <PageHeader
-        number="03"
-        kicker="Contract vehicles"
-        total="03 / 04"
+        kicker="Contract Vehicles"
         title={<>Pre-competed. <span className="text-text-muted">Easy to buy.</span></>}
         subtitle="Two active vehicles. Direct-award eligible. We can move from intro call to executed task order in weeks, not quarters."
       />

@@ -1,13 +1,10 @@
-"use client";
-
-import { motion } from "motion/react";
 import { Section } from "@/components/ui/Section";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 
 export function CaseStudy() {
   return (
     <Section id="case">
-      <Eyebrow number="05" label="Outcome · Air Force" total="06 / 09" />
+      <Eyebrow label="Case Study" />
 
       <div className="mt-10 grid grid-cols-1 gap-12 md:grid-cols-12">
         <div className="md:col-span-5">
@@ -24,13 +21,7 @@ export function CaseStudy() {
         </div>
 
         <div className="md:col-span-7">
-          <motion.div
-            initial={{ opacity: 0, y: 18 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.7 }}
-            className="grid grid-cols-2 gap-px bg-[var(--border)]"
-          >
+          <div className="grid grid-cols-2 gap-px bg-[var(--border)]">
             <Block label="Before" tone="dim">
               <Line k="Process" v="Manual case routing" />
               <Line k="Cycle time" v="Weeks" />
@@ -43,9 +34,9 @@ export function CaseStudy() {
               <Line k="Throughput" v="Bursts within FedRAMP boundary" />
               <Line k="Workforce" v="5,000+ certified builders" />
             </Block>
-          </motion.div>
+          </div>
 
-          <div className="mt-6 font-mono text-[11px] uppercase tracking-[0.18em] text-text-dim">
+          <div className="mt-6 text-xs text-text-dim">
             Air Force Personnel · Air Force Sustainment Command · Federal case-management programs
           </div>
         </div>
@@ -67,7 +58,7 @@ function Block({
     <div className="bg-bg p-8">
       <div
         className={
-          "font-mono text-[10px] uppercase tracking-[0.2em] " +
+          "text-xs font-semibold uppercase tracking-wide " +
           (tone === "accent" ? "text-accent" : "text-text-dim")
         }
       >
@@ -81,7 +72,7 @@ function Block({
 function Line({ k, v }: { k: string; v: string }) {
   return (
     <div className="grid grid-cols-[110px_1fr] gap-4 border-t border-[var(--border)] pt-3">
-      <dt className="font-mono text-[10px] uppercase tracking-[0.18em] text-text-dim">{k}</dt>
+      <dt className="text-xs font-medium uppercase tracking-wide text-text-dim">{k}</dt>
       <dd className="text-sm text-text">{v}</dd>
     </div>
   );
