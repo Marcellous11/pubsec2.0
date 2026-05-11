@@ -1,7 +1,7 @@
 import { Hero } from "@/components/home/Hero";
-import { Proof } from "@/components/home/Proof";
 import { Services } from "@/components/home/Services";
 import { Differentiators } from "@/components/home/Differentiators";
+import { Proof } from "@/components/home/Proof";
 import { Vehicles } from "@/components/home/Vehicles";
 import { CaseStudy } from "@/components/home/CaseStudy";
 import { Partners } from "@/components/home/Partners";
@@ -11,9 +11,9 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <Proof />
       <Services />
       <Differentiators />
+      <Proof />
       <CaseStudy />
       <Vehicles />
       <Partners />

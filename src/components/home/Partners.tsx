@@ -10,8 +10,8 @@ const partners = [
 
 export function Partners() {
   return (
-    <Section id="partners" accentRule>
-      <Eyebrow number="06" label="Stack · technology partners" total="07 / 09" />
+    <Section id="partners">
+      <Eyebrow label="Technology Partners" />
 
       <div className="mt-10 grid grid-cols-1 gap-10 md:grid-cols-[1.5fr_3fr]">
         <h2 className="max-w-[18ch] text-3xl tracking-[-0.02em] text-text md:text-4xl md:leading-[1.08]">
@@ -27,7 +27,7 @@ export function Partners() {
       <div className="mt-16 grid grid-cols-2 gap-px bg-[var(--border)] md:grid-cols-4">
         {partners.map((p) => (
           <div key={p.name} className="bg-bg p-8">
-            <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-text-dim">
+            <div className="text-xs font-semibold uppercase tracking-wide text-text-dim">
               Partner
             </div>
             <div className="mt-6 text-2xl tracking-[-0.01em] text-text">

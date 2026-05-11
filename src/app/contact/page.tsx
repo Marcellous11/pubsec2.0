@@ -11,9 +11,7 @@ export default function ContactPage() {
   return (
     <>
       <PageHeader
-        number="07"
-        kicker="Contact · brief us"
-        total="01 / 01"
+        kicker="Contact"
         title={<>Brief us on the mission. <span className="text-text-muted">We&rsquo;ll respond within two business days.</span></>}
         subtitle="The fastest path is a short note about the agency, the problem, and the boundary you need us to deliver inside. We&rsquo;ll come back with a delivery shape, not a sales deck."
       />
@@ -21,7 +19,7 @@ export default function ContactPage() {
       <Section bordered={false}>
         <div className="grid grid-cols-1 gap-16 md:grid-cols-2">
           <div id="brief">
-            <div className="font-mono text-[11px] uppercase tracking-[0.2em] text-text-dim">Mission brief</div>
+            <div className="text-xs font-semibold uppercase tracking-wide text-text-dim">Mission brief</div>
             <form className="mt-8 space-y-6" action="mailto:hello@invokepublic.com" method="post" encType="text/plain">
               <Field label="Name" name="name" />
               <Field label="Agency / organization" name="agency" />
@@ -34,7 +32,7 @@ export default function ContactPage() {
               />
               <button
                 type="submit"
-                className="group inline-flex h-10 items-center gap-2 bg-accent px-4 font-mono text-xs uppercase tracking-[0.16em] text-bg transition-colors hover:bg-[#f3b85b]"
+                className="group inline-flex h-11 items-center gap-2 rounded-full bg-accent px-6 text-sm font-medium text-bg transition-colors hover:bg-[#f3b85b]"
               >
                 Send brief
                 <ArrowUpRight
@@ -46,17 +44,17 @@ export default function ContactPage() {
           </div>
 
           <div>
-            <div className="font-mono text-[11px] uppercase tracking-[0.2em] text-text-dim">Direct</div>
+            <div className="text-xs font-semibold uppercase tracking-wide text-text-dim">Direct</div>
             <h2 className="mt-6 text-2xl tracking-[-0.01em] text-text">Or skip the form.</h2>
             <ul className="mt-8 space-y-5 text-text-muted">
               <li>
-                <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-text-dim">Email</span>
+                <span className="text-xs font-semibold uppercase tracking-wide text-text-dim">Email</span>
                 <a className="mt-2 block text-text hover:text-accent" href="mailto:hello@invokepublic.com">
                   hello@invokepublic.com
                 </a>
               </li>
               <li>
-                <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-text-dim">LinkedIn</span>
+                <span className="text-xs font-semibold uppercase tracking-wide text-text-dim">LinkedIn</span>
                 <a
                   className="mt-2 block text-text hover:text-accent"
                   href="https://www.linkedin.com/company/invoke-inc"
@@ -67,7 +65,7 @@ export default function ContactPage() {
                 </a>
               </li>
               <li>
-                <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-text-dim">Capability statement</span>
+                <span className="text-xs font-semibold uppercase tracking-wide text-text-dim">Capability statement</span>
                 <span className="mt-2 block text-text">Available on request.</span>
               </li>
             </ul>
@@ -92,10 +90,10 @@ function Field({
   placeholder?: string;
 }) {
   const cls =
-    "mt-2 w-full bg-bg-raised border border-[var(--border)] px-4 py-3 text-sm text-text placeholder:text-text-dim focus:border-accent focus:outline-none transition-colors";
+    "mt-2 w-full rounded-md bg-bg-raised border border-[var(--border)] px-4 py-3 text-sm text-text placeholder:text-text-dim focus:border-accent focus:outline-none transition-colors";
   return (
     <label className="block">
-      <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-text-dim">{label}</span>
+      <span className="text-xs font-semibold uppercase tracking-wide text-text-dim">{label}</span>
       {textarea ? (
         <textarea name={name} rows={5} placeholder={placeholder} className={cls} />
       ) : (

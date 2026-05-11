@@ -5,7 +5,7 @@ import { ArrowUpRight } from "lucide-react";
 type Variant = "primary" | "ghost";
 
 const base =
-  "inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.16em] px-4 h-10 transition-colors duration-200 group";
+  "inline-flex items-center gap-2 text-sm font-medium rounded-full px-6 h-11 transition-colors duration-200 group";
 
 const variants: Record<Variant, string> = {
   primary:
@@ -19,7 +19,7 @@ export function Button({
   variant = "primary",
   className,
   children,
-  arrow = true,
+  arrow = false,
   external,
 }: {
   href: string;

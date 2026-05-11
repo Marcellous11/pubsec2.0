@@ -30,9 +30,7 @@ export default function CapabilitiesPage() {
   return (
     <>
       <PageHeader
-        number="02"
         kicker="Capabilities"
-        total="02 / 04"
         title={<>What we deliver.<br /><span className="text-text-muted">Inside the boundary.</span></>}
         subtitle="The federal market is full of vendors whose capability deck is longer than their delivery record. Here is what we actually do."
       />
@@ -40,7 +38,7 @@ export default function CapabilitiesPage() {
         <div className="grid grid-cols-1 gap-px bg-[var(--border)] md:grid-cols-2">
           {blocks.map((b) => (
             <div key={b.h} className="bg-bg p-10">
-              <div className="font-mono text-[11px] uppercase tracking-[0.2em] text-text-dim">Capability</div>
+              <div className="text-xs font-semibold uppercase tracking-wide text-text-dim">Capability</div>
               <h3 className="mt-6 text-2xl tracking-[-0.01em] text-text">{b.h}</h3>
               <p className="mt-4 max-w-[52ch] text-text-muted">{b.body}</p>
             </div>

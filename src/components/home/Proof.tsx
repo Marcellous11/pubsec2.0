@@ -1,7 +1,3 @@
-"use client";
-
-import { motion, useInView } from "motion/react";
-import { useRef } from "react";
 import { Section } from "@/components/ui/Section";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 
@@ -33,14 +29,11 @@ const metrics = [
 ];
 
 export function Proof() {
-  const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once: true, amount: 0.35 });
-
   return (
-    <Section id="proof" accentRule>
+    <Section id="proof">
       <div className="grid grid-cols-1 gap-10 md:grid-cols-[1fr_2fr]">
         <div>
-          <Eyebrow number="01" label="Impact · in production" total="02 / 09" />
+          <Eyebrow label="Impact" />
           <h2 className="mt-8 max-w-[18ch] text-3xl tracking-[-0.02em] text-text md:text-4xl">
             Numbers that already shipped.
           </h2>
@@ -50,28 +43,22 @@ export function Proof() {
           </p>
         </div>
 
-        <div ref={ref} className="grid grid-cols-1 gap-px bg-[var(--border)] sm:grid-cols-2">
-          {metrics.map((m, i) => (
-            <motion.div
-              key={m.label}
-              initial={{ opacity: 0, y: 16 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: i * 0.08 }}
-              className="bg-bg p-7"
-            >
-              <div className="font-mono text-[10px] uppercase tracking-[0.18em] text-text-dim">
+        <div className="grid grid-cols-1 gap-px bg-[var(--border)] sm:grid-cols-2">
+          {metrics.map((m) => (
+            <div key={m.label} className="bg-bg p-7">
+              <div className="text-xs font-semibold uppercase tracking-wide text-text-dim">
                 {m.label}
               </div>
               <div className="mt-5 flex items-baseline gap-2">
                 <span className="text-5xl tracking-[-0.03em] text-text md:text-6xl">
                   {m.value}
                 </span>
-                <span className="font-mono text-[11px] uppercase tracking-[0.16em] text-accent">
+                <span className="text-sm font-medium text-accent">
                   {m.unit}
                 </span>
               </div>
               <p className="mt-5 max-w-[34ch] text-sm text-text-muted">{m.detail}</p>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
