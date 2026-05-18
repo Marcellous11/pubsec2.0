@@ -27,9 +27,9 @@ const vehicles = [
   },
 ];
 
-export function Vehicles() {
+export function Vehicles({ tone }: { tone?: "base" | "raised" } = {}) {
   return (
-    <Section id="vehicles">
+    <Section id="vehicles" tone={tone}>
       <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
         <div>
           <Eyebrow label="Contract Vehicles" />

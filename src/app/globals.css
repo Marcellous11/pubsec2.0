@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "tw-animate-css";
 
 /* Token system — verbatim from wip-themes-invoke2026 deck.
    Graphite base + single warm amber accent. The amber never fills a
@@ -56,6 +57,14 @@ body {
 ::selection {
   background: var(--accent);
   color: var(--bg);
+}
+
+/* Keep in-page anchor targets clear of the sticky 64px header. Applies to
+   every element with an id (Section wrappers, page-level anchor rows like
+   /services, /vehicles, /about), so anchored navigation never lands under
+   the nav. scroll-margin-top only affects scroll-into-view behavior. */
+[id] {
+  scroll-margin-top: calc(var(--header-h) + 1.5rem);
 }
 
 

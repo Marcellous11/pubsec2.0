@@ -2,9 +2,9 @@ import { Section } from "@/components/ui/Section";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Button } from "@/components/ui/Button";
 
-export function Cta() {
+export function Cta({ tone }: { tone?: "base" | "raised" } = {}) {
   return (
-    <Section id="cta" innerClassName="py-32 md:py-40">
+    <Section id="cta" tone={tone} innerClassName="py-32 md:py-40">
       <div className="grid grid-cols-1 gap-12 md:grid-cols-12 md:items-end">
         <div className="md:col-span-7">
           <Eyebrow label="Get Started" />

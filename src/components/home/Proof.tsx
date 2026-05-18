@@ -28,9 +28,9 @@ const metrics = [
   },
 ];
 
-export function Proof() {
+export function Proof({ tone }: { tone?: "base" | "raised" } = {}) {
   return (
-    <Section id="proof">
+    <Section id="proof" tone={tone}>
       <div className="grid grid-cols-1 gap-10 md:grid-cols-[1fr_2fr]">
         <div>
           <Eyebrow label="Impact" />

@@ -36,9 +36,9 @@ const services = [
   },
 ];
 
-export function Services() {
+export function Services({ tone }: { tone?: "base" | "raised" } = {}) {
   return (
-    <Section id="services">
+    <Section id="services" tone={tone}>
       <div className="flex flex-col items-start justify-between gap-8 md:flex-row md:items-end">
         <div>
           <Eyebrow label="Capabilities" />

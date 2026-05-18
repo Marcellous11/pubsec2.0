@@ -16,9 +16,9 @@ const points = [
   },
 ];
 
-export function Differentiators() {
+export function Differentiators({ tone }: { tone?: "base" | "raised" } = {}) {
   return (
-    <Section id="why">
+    <Section id="why" tone={tone}>
       <Eyebrow label="Why Invoke" />
 
       <h2 className="mt-8 max-w-[22ch] text-3xl tracking-[-0.02em] text-text md:text-5xl md:leading-[1.05]">

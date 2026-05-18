@@ -6,12 +6,14 @@ export function Section({
   className,
   innerClassName,
   bordered = true,
+  tone = "base",
   children,
 }: {
   id?: string;
   className?: string;
   innerClassName?: string;
   bordered?: boolean;
+  tone?: "base" | "raised";
   children: React.ReactNode;
 }) {
   return (
@@ -19,6 +21,7 @@ export function Section({
       id={id}
       className={cn(
         "relative",
+        tone === "raised" && "bg-bg-raised",
         bordered && "border-t border-[var(--border)]",
         className,
       )}

@@ -1,9 +1,9 @@
 import { Section } from "@/components/ui/Section";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 
-export function CaseStudy() {
+export function CaseStudy({ tone }: { tone?: "base" | "raised" } = {}) {
   return (
-    <Section id="case">
+    <Section id="case" tone={tone}>
       <Eyebrow label="Case Study" />
 
       <div className="mt-10 grid grid-cols-1 gap-12 md:grid-cols-12">
@@ -21,7 +21,7 @@ export function CaseStudy() {
         </div>
 
         <div className="md:col-span-7">
-          <div className="grid grid-cols-2 gap-px bg-[var(--border)]">
+          <div className="grid grid-cols-1 gap-px bg-[var(--border)] sm:grid-cols-2">
             <Block label="Before" tone="dim">
               <Line k="Process" v="Manual case routing" />
               <Line k="Cycle time" v="Weeks" />
@@ -55,7 +55,7 @@ function Block({
   children: React.ReactNode;
 }) {
   return (
-    <div className="bg-bg p-8">
+    <div className="bg-bg p-6 sm:p-8">
       <div
         className={
           "text-xs font-semibold uppercase tracking-wide " +

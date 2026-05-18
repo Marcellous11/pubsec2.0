@@ -8,9 +8,9 @@ const partners = [
   { name: "Ideagen", role: "Case Management partner" },
 ];
 
-export function Partners() {
+export function Partners({ tone }: { tone?: "base" | "raised" } = {}) {
   return (
-    <Section id="partners">
+    <Section id="partners" tone={tone}>
       <Eyebrow label="Technology Partners" />
 
       <div className="mt-10 grid grid-cols-1 gap-10 md:grid-cols-[1.5fr_3fr]">
